@@ -1,0 +1,8 @@
+<hr>
+<h2>El contador está en: {{time}}</h2>
+
+<p *ngIf="message">No puedes restar al 0</p>
+
+<button (click)="addCounter()">Aumentar</button>
+<button (click)="subCounter()">Disminuir</button>
+<button (click)="resetCounter()">Inicializar</button>
