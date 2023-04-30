@@ -1,0 +1,21 @@
+<h2>Introduce tus datos:</h2>
+<p>Nombre:</p>
+
+<input type="text" [(ngModel)]="name">
+<p>Apellidos:</p>
+<input type="text" [(ngModel)]="surname">
+<p>Teléfono:</p>
+<input type="tel" [(ngModel)]="phoneNumber"><br><br>
+<p>Fecha de nacimiento:</p>
+<input type="date" [(ngModel)]="birthDate">
+
+<br><br><br><br>
+
+<table border="3px" *ngIf="name || surname || birthDate || phoneNumber">
+	<tr>
+		<td *ngIf="name">Nombre</td> <td *ngIf="surname">Apellido</td> <td *ngIf="phoneNumber">Teléfono</td><td *ngIf="birthDate">Fecha de nacimiento</td>
+    </tr>
+	<tr>
+		<td *ngIf="name">{{ name}}</td> <td *ngIf="surname">{{surname}}</td> <td *ngIf="phoneNumber">{{phoneNumber}}</td><td *ngIf="birthDate">{{birthDate}}</td>
+    </tr>
+</table>
