@@ -1,0 +1,11 @@
+<hr>
+<h2>Añade una fruta:</h2>
+<input type="text" [(ngModel)]="fruit">
+<button (click)="addFruit()">Añadir</button>
+
+<p  *ngFor="let newFruit of fruitList; let i = index" [attr.data-index]="i">
+    <button (click)="delFruit(i)"  >Eliminar</button> 
+    {{newFruit}}
+    
+
+</p>
